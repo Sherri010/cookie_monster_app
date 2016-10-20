@@ -6,5 +6,10 @@
 
 </br>
 
+
+  <% if session[:favorite_dessert_id] == @dessert.id %>
+    <p>Your Favorite </p>
 <!-- CHANGE THIS link to reflect whether the dessert has already been favorited -->
+<% else %>
 <%= button_to "Save as Favorite", save_as_favorite_path(@dessert.id) %>
+<%end%>
